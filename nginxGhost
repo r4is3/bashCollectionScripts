@@ -11,7 +11,7 @@ server {
 	#ssl_certificate_key /etc/nginx/ssl/ghost-ssl.key;
 
         # uncomment to give hostname
-        server_name www.w0rld.fr;
+        server_name your.host;
         client_max_body_size 512M;
         try_files $uri $uri/ /index.html;
         ## avoir login 404 for favicon

@@ -15,7 +15,7 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Ghost"
 NAME=ghost
-GHOST_ROOT=/var/www/ghost
+GHOST_ROOT=/var/www/node_module/ghost
 GHOST_GROUP=ghost
 GHOST_USER=ghost
 DAEMON=/usr/local/bin/node

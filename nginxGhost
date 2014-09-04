@@ -6,8 +6,9 @@ server{        return 404; }
 server {
         listen 80;
 	listen 443 ssl;
-	ssl_certificate /etc/nginx/ssl/ghost-ssl.pem;
-	ssl_certificate_key /etc/nginx/ssl/ghost-ssl.key;
+	## Uncomment the following line to provide ssl but don't forget to create your certificate
+	#ssl_certificate /etc/nginx/ssl/ghost-ssl.pem;
+	#ssl_certificate_key /etc/nginx/ssl/ghost-ssl.key;
 
         # uncomment to give hostname
         server_name www.w0rld.fr;

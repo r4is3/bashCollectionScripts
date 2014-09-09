@@ -30,3 +30,4 @@ server {
         access_log      /var/log/nginx/ghostAccess.log;
         error_log       /var/log/nginx/ghostError.log;
         }
+}

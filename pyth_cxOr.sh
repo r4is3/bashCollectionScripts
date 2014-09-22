@@ -40,7 +40,7 @@ case $answer in
 		exit 1
 		;;
 esac
-#version=`PyVers`
+version=`PyVers`
 echo -e "OK, you're about to [re]compile python-${version}"
 wget --no-check-certificate -O - https://www.python.org/ftp/python/${version}/Python-${version}.tgz | tar xvvzf -
 #wget -O - http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tgz | tar xvvzf - 

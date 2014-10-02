@@ -16,7 +16,7 @@ DONTCHECK="192.168.0.*"
 isEmpty=`cat ${LOGFILE} | awk '{print $1}' | grep -vE ${DONTCHECK}  | wc -l`
 if  [ $isEmpty -eq 0 ]
 then 
-	echo -e "No acces to plan 4 for this week\n"
+	echo -e "No acces to web  server for this week\n"
 
 # These Line perform a daily reporting
 else
@@ -24,7 +24,7 @@ else
 	do
 		echo -e "############"
 		echo $i
-		#line=`cat plan4-httpAccess.log.7 | grep $i | grep -vE ${DONTCHECK} | awk '{print $1}' | sort -n | uniq -c | sort -r`
+		#line=`cat logFile.log | grep $i | grep -vE ${DONTCHECK} | awk '{print $1}' | sort -n | uniq -c | sort -r`
 		for j in `cat ${LOGFILE} | grep --color $i | grep -vE ${DONTCHECK} | awk '{print $1}' | sort -n | uniq -c | sort -r`
 		do
 			nbre=`echo $j | awk '{print $1}'`

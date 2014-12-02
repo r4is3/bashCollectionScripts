@@ -17,6 +17,5 @@ do
                 echo -e "$user expire dans : $count"
                 (echo "Subject: Expiration de votre mot de passe";echo -e "Votre mot de passe va expirer dans moins de $count jours\nPas d'inquietude, le serveur vous proposera de le renouveler à la bonne date, vous n'avez rien à faire") | /opt/zimbra/postfix/sbin/sendmail $user
         fi
-        
 done
 

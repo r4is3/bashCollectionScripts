@@ -83,6 +83,7 @@ then
 	$(grep -E 'DBCLIENT_HOME=' `cat /etc/passwd | grep $user | cut -d':' -f 6`/.bashrc)
 #	export LD_LIBRARY_PATH=$DBCLIENT_HOME
 	echo "Setting this env variable : $(grep -E 'DBCLIENT_HOME=' `cat /etc/passwd | grep $user | cut -d':' -f 6`/.bashrc)"
+	export ORACLE_HOME=$DBCLIENT_HOME
 else 
 	$(grep -E 'ORACLE_HOME=' `cat /etc/passwd | grep $user | cut -d':' -f 6`/.bashrc)
 	echo "Setting This env variable : $(grep -E 'ORACLE_HOME=' `cat /etc/passwd | grep $user | cut -d':' -f 6`/.bashrc)"
@@ -90,7 +91,6 @@ else
 fi
 
 # Install module
-export ORACLE_HOME=$DBCLIENT_HOME
 pip install cx_Oracle
 chmod -R 755 /usr/local/lib/python2.7/site-packages/
 su -c 'sed -i "/ORACLE_HOME=/ a\export LD_LIBRARY_PATH=\${ORACLE_HOME}/lib" ~/.bashrc' $user

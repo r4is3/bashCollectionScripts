@@ -88,6 +88,8 @@ else
 	$(grep -E 'ORACLE_HOME=' `cat /etc/passwd | grep $user | cut -d':' -f 6`/.bashrc)
 	echo "Setting This env variable : $(grep -E 'ORACLE_HOME=' `cat /etc/passwd | grep $user | cut -d':' -f 6`/.bashrc)"
 	export LD_LIBRARY_PATH=$ORACLE_HOME/lib
+	echo $ORACLE_HOME
+	export $ORACLE_HOME
 fi
 
 # Install module

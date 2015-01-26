@@ -26,7 +26,7 @@ cd /tmp
 # Please check if wget is installed
 # Download source
 
-echo -e "Does you system have python2.7 already installed?"
+echo -e "Does you system have python 2.7 already installed?"
 read answer
 case $answer in
 	[y/Y]*)
